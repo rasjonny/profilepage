@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 class ProfileWidget extends StatelessWidget {
   const ProfileWidget({
     super.key,
+    this.isEdit=false,
     required this.onClicked,
     required this.imagePath,
   });
+  final bool isEdit;
   final VoidCallback onClicked;
   final String imagePath;
   @override
@@ -41,9 +43,11 @@ class ProfileWidget extends StatelessWidget {
       child: buildCircle(
           color: color,
           all: 8,
-          child: const Icon(
+          child: 
+           Icon( isEdit ?Icons.image_search_outlined:
             Icons.edit,
             color: Colors.white,
+            size: 20,
           )));
 
   Widget buildCircle({
