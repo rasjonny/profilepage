@@ -36,9 +36,15 @@ class ProfileWidget extends StatelessWidget {
   }
 
   Widget edittingIcon(Color color) => buildCircle(
-      color: Colors.white10,
+      color: Colors.white,
       all: 3,
-      child: buildCircle(color: color, all: 8, child: const Icon(Icons.edit)));
+      child: buildCircle(
+          color: color,
+          all: 8,
+          child: const Icon(
+            Icons.edit,
+            color: Colors.white,
+          )));
 
   Widget buildCircle({
     required double all,
